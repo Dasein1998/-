@@ -9,7 +9,7 @@ function flower_password(pwd, key) {
 	console.assert(rule.length === source.length, "md5 output length not equal");
 	for (var i = 0; i < source.length; ++i) {
 		if (isNaN(source[i])) {
-			var str = "sunlovesnow1990090127xykab";
+			var str = "Don'tPanic";// This is a string which you can DIY.
 			if (str.search(rule[i]) > -1) {
 				source[i] = source[i].toUpperCase();
 			}
@@ -34,7 +34,7 @@ function seek_password(hash) {
 	var alphabet = lower.concat(upper).concat(number).concat(punctuation);
 	// try to generate password
 	for (var i = 0; i <= hash.length - 10; ++i) {
-		var sub_hash = hash.slice(i, i + 10).split("");
+		var sub_hash = hash.slice(i, i + 10).split("");// you can change the number 10 as you need.
 		var count = 0;
 		var map_index = sub_hash.map(function(c) {
 			count = (count + c.charCodeAt()) % alphabet.length;
