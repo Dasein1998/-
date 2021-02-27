@@ -33,8 +33,8 @@ function seek_password(hash) {
 	var punctuation = ",.:;!?".split("");
 	var alphabet = lower.concat(upper).concat(number).concat(punctuation);
 	// try to generate password
-	for (var i = 0; i <= hash.length - 10; ++i) {
-		var sub_hash = hash.slice(i, i + 10).split("");// you can change the number 10 as you need.
+	for (var i = 0; i <= hash.length - 11; ++i) {
+		var sub_hash = hash.slice(i, i + 11).split("");// you can change the number 10 as you need.
 		var count = 0;
 		var map_index = sub_hash.map(function(c) {
 			count = (count + c.charCodeAt()) % alphabet.length;
